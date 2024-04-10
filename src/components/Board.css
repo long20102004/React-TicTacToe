@@ -1,0 +1,24 @@
+.board-container{
+    align-self: center;
+    justify-self: center;
+    width: 340px;
+    height: 340px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
+}
+.board-column{
+    display: grid;
+    gap: 20px;
+}
+.board-column > *{
+    width: 100px;
+    height: 100px;
+    background-color: lightyellow;
+    font-family:Raleway;
+    font-size: 40px;
+}
+.board:hover {
+    border: 2px solid yellow;
+    box-shadow: 0 0 10px yellow; 
+}

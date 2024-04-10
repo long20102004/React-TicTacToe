@@ -1,0 +1,22 @@
+
+.board-bound{
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr;
+    width: 500px;
+    height: 500px;
+    background-color: #222831;
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    
+}
+.board-bound > .player-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end   ;
+    width: 100%;
+}
+
+textarea:focus{
+    border: none;
+}

@@ -1,0 +1,26 @@
+.player{
+    display: flex;
+    width: 45%;
+    color: rgb(255, 255, 255, 0.9);
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Kondolarge Bold';
+    font-weight: 200;
+    height: 3em;
+}
+.edit{
+    font-size: small;
+    all: unset;
+}
+.player:hover, .player-active{
+    border: 2px solid yellow;
+}
+textarea{
+    background-color: rgba(74, 80, 80, 0.3); /* Lower alpha value */
+    border: none;
+    text-align: center;
+    font-family: 'Kondolarge Bold';
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
