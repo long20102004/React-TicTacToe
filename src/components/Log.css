@@ -1,0 +1,17 @@
+.log-list{
+    margin-top: 20px;
+}
+.log-detail{
+    list-style-type: none;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    width: 0;
+    animation: reveal 1s linear forwards;
+    font-family: "roboto";
+    font-weight: 400;
+}
+
+@keyframes reveal {
+    from { width: 50%; }
+    to { width: 100%; }
+}

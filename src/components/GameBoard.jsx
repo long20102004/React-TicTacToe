@@ -2,13 +2,22 @@ import Player from "./Player";
 import "./GameBoard.css";
 import Board from "./Board";
 import { useState } from "react";
+import Log from "./Log";
 export default function GameBoard() {
   const firstSymbol = "X";
   const [symbol, setSymbol] = useState(firstSymbol);
+  const [log, setLog] = useState([]);
+  const initBoardState = [
+    [false, false, false],
+    [false, false, false],
+    [false, false, false],
+  ];
+  const [boardState, setBoardState] = useState(initBoardState);
+  // const [turn, setTurn] = [firstSymbol, boardState];
   function changeSymbol() {
     setSymbol((prevSymbol) => {
       if (prevSymbol === "X") return "O";
-      else return "X";
+      return "X";
     });
   }
   return (
@@ -26,8 +35,15 @@ export default function GameBoard() {
             isActive={symbol === "O" ? true : false}
           ></Player>
         </div>
-        <Board changeSymbol={changeSymbol} symbol={symbol}></Board>
+        <Board
+          changeSymbol={changeSymbol}
+          symbol={symbol}
+          setLog={setLog}
+          selectedSquare={boardState}
+          setSelectedSquare={setBoardState}
+        ></Board>
       </div>
+      <Log turn={log}></Log>
     </>
   );
 }
